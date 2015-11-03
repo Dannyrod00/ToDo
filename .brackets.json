@@ -1,0 +1,13 @@
+{
+   "jslint.options": {
+      "node": true,
+       "nomen": true,
+       "predef": [
+            "Session",
+           "Template",
+           "Meteor",
+           "Mongo",
+           "$";
+       ]
+   }
+}
