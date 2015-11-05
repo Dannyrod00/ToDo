@@ -13,7 +13,8 @@
 
 <template name="todos">
     <ul>
-        <li>Task 1</li>
-        <li>Task 2</li>
+        {{#each todoList}}
+        <li>{{this}}</li>
+        {{/each}}
     </ul>
 </template>
