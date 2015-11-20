@@ -1,1 +1,29 @@
-/* CSS declarations go here */
+.completed {
+   text-decoration: line-through;
+}
+
+.secondary-content a {
+    margin: 0 0.5em
+}
+
+.complete-task {
+   color: green;
+}
+
+.incomplete-task {
+   color: red;
+}
+
+i {
+  cursor: pointer;
+}
+
+.center-button {
+    text-align: center;   
+}
+
+.input-field {
+    margin: 0 auto;
+    width: 75%;
+}
+    

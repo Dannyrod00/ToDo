@@ -1,20 +1,38 @@
 <template name="header">
     <header>
-        <h1>My ToDo List</h1>
+        <h1 class="center-align">My ToDo List</h1>
     </header>
 </template>
 
 <template name="form">
-    <form>
-        <input/>
-        <button>Submit</button>
+    <form class="add-new-task">
+        <div class="input-field">
+            <input type="text" placeholder="Add New Task" />
+        </div>
+        <div class="center-button">
+            <button class="waves-effect waves-teal btn-flat">Submit</button>
+        </div>
     </form>
 </template>
 
 <template name="todos">
-    <ul>
-        {{#each todoList}}
-        <li>{{this}}</li>
+    <ul class="collection">
+        {{#each todoList}} {{this.createdAt}}
+        <li class="collection-item {{#if this.complete}} completed {{/if}}">
+            {{this.name}}
+            <div class="secondary-content">
+                {{> completeCheck this}}
+                <a class="delete-task"><i class="material-icons">delete</i></a>
+            </div>
+        </li>
         {{/each}}
     </ul>
+</template>
+
+<template name="completeCheck">
+
+    {{#unless this.complete}}
+    <a class="complete-task"><i class="material-icons">done</i></a> {{else}}
+    <a class="incomplete-task"><i class="material-icons">not_interested</i></a> {{/unless}}
+
 </template>
